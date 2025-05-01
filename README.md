@@ -20,6 +20,6 @@ Excel-Tabelle mit Vokabeln erstellen:
 
 Programm ausführen:
 -
-- `python Vokabeltrainer.py`
+- `python vokabeltrainer.py`
 - die Adresse zur Excel-Tabelle eingeben (z.B. `/home/user/Documents/vokabeln.xlsx` oder `C:\Users\nutzer\Dokumente\vokabeln.xlsx`)
 - Vokabeltrainer beenden: `exit` oder `Exit`
