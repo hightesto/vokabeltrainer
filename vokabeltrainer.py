@@ -1,6 +1,23 @@
 import pandas as pd
 import random
 from colorama import Fore, Style, init
+from io import BytesIO
+from google.colab import files  # Nur relevant in Colab
+
+print("Lade eine Excel-Tabelle mit den Vokabeln hoch. Eine Spalte soll "Englisch" heißen (das Wort(/Satz) das angezeigt wird; können auch Wörter aus einer anderen Sprache sein) und die andere "Deutsch" (das Wort(/Satz) das abgefragt wird)
+
+# Datei-Upload ermöglichen
+dateipfad = files.upload()
+
+# Erwarte eine einzige Datei
+for filename in uploaded.keys():
+    df = pd.read_excel(BytesIO(dateipfad[filename]))
+
+# Beispiel-Verarbeitung (hier: nur anzeigen)
+print("Erste 5 Zeilen der geladenen Datei:")
+print(df.head())
+
+# Hier beginnt Ihre Vokabeltrainer-Logik
 
 # Initialisieren von colorama
 init(autoreset=True)
@@ -11,7 +28,7 @@ def vokabel_trainer():
     print("Tippe 'exit', um das Programm zu beenden.")
     
     # Dateipfad abfragen
-    dateipfad = input("Dateipfad zur Excel-Datei mit den Vokabeln: ")
+    #dateipfad = input("Dateipfad zur Excel-Datei mit den Vokabeln: ")
 
     # Excel-Datei laden
     try:
