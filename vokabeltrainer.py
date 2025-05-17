@@ -8,7 +8,7 @@ def vokabel_trainer():
     print("Tippe 'exit', um das Programm zu beenden.")
     
     # Dateipfad abfragen
-    #dateipfad = input("Dateipfad zur Excel-Datei mit den Vokabeln: ")
+    dateipfad = input("Dateipfad zur Excel-Datei mit den Vokabeln: ")
 
     # Excel-Datei laden
     try:
