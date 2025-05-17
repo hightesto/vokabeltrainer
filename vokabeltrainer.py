@@ -1,30 +1,6 @@
 import pandas as pd
 import random
 from colorama import Fore, Style, init
-import gradio as gr
-
-def dateipfad(uploaded_file):
-    if uploaded_file is None:
-        return "Bitte laden Sie eine Excel-Datei hoch."
-    try:
-        # Excel-Datei mit pandas lesen
-        df = pd.read_excel(uploaded_file.name, engine="openpyxl")
-        # Hier können Sie Ihre Vokabeltrainer-Logik einfügen
-        return df.head()  # Zeigt die ersten Zeilen als Beispiel
-    except Exception as e:
-        return f"Fehler beim Lesen der Datei: {e}"
-
-# Gradio Interface definieren
-iface = gr.Interface(
-    fn=vokabeltrainer,
-    inputs=gr.File(file_types=[".xlsx"]),
-    outputs=gr.Dataframe(),
-    title="Interaktiver Vokabeltrainer",
-    description="Bitte laden Sie eine Excel-Datei mit Vokabeln hoch."
-)
-
-if __name__ == "__main__":
-    iface.launch()
 
 def vokabel_trainer():
     
